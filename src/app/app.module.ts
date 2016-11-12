@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { Server } from './server';
-import { Client } from './client';
 import { Singleton } from './singleton';
+//import { AbstractFactory } from './abstractfactory';
+import { FactoryMethod } from './factorymethod';
 
 import { AppComponent } from './app.component';
 
@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule
   ],
-  providers: [Server, Client, Singleton],
+  providers: [Singleton, FactoryMethod],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

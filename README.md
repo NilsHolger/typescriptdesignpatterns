@@ -8,9 +8,11 @@ get inspired and build an app, then build another one ...
 1. Singleton pattern
 a class of which only a single instance can exist
 
-2.
+2. Abstract Factory pattern
+create an instance of several families of classes
 
-3.
+3. Factory method
+facilitates creation of other objects
 
 4.
 
