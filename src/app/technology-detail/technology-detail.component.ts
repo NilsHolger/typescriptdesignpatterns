@@ -25,6 +25,9 @@ export class TechnologyDetailComponent implements OnInit {
         this.technologyService.getTechnology(id).then(technology => this.technology = technology);
     });
   }
+  save(): void{
+    this.technologyService.update(this.technology).then(() => this.goBack());
+  }
 
   goBack(): void {
     this.location.back();
