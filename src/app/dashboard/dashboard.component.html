@@ -1,0 +1,9 @@
+<div class="grid grid-pad">
+  <a *ngFor="let technology of technologies" [routerLink]="['/detail', technology.id]" class="col-l-4">
+      <div class="module technology">
+          <h4>
+            {{technology.name}}
+          </h4>
+      </div>
+  </a>
+</div>

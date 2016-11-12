@@ -1,0 +1,14 @@
+<h2>Technologies <i class="fa fa-spinner fa-pulse fa-fw"></i>
+<span class="sr-only"></span></h2>
+<ul class="technologies">
+  <li *ngFor="let technology of technologies" (click)="onSelect(technology)" 
+  [class.selected]="technology === selectedTechnology">
+        <span class="badge">{{technology.id}}</span> {{technology.name}}
+  </li>
+</ul>
+<div *ngIf="selectedTechnology">
+  <h2>
+    {{selectedTechnology.name | uppercase}} is my technology
+  </h2>
+<button (click)="gotoDetail()">View Details</button>
+</div>

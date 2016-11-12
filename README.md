@@ -1,4 +1,5 @@
 # simple modern typescript/javascript design patterns
+https://github.com/NilsHolger/typescriptdesignpatterns
 
 root ng serve
 we must learn the technologies forwards and backwards ... 
@@ -25,9 +26,11 @@ a fully initialized instance to be copied or cloned
 
 Structural
 
-6.
+6. Adapter
+match interfaces of different classes
 
-7.
+7. Bridge
+separates an object's interface from its implementation
 
 8.
 

@@ -1,0 +1,7 @@
+<div *ngIf="technology">
+<h2>{{technology.name}} details!</h2>
+<div><label>id :</label>{{technology.id}}</div>
+<div><label>name :</label><input [(ngModel)]="technology.name" placeholder="name"></div>
+<div><label>url :</label><input value="{{technology.url}}" placeholder="url"></div>
+<button (click)="goBack()">Back</button>
+</div>
