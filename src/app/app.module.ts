@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { Singleton } from './singleton';
 //import { AbstractFactory } from './abstractfactory';
 import { FactoryMethod } from './factorymethod';
+import { Builder } from './builder';
+import { Prototype } from './prototype';
 
 import { AppComponent } from './app.component';
 
@@ -18,7 +20,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule
   ],
-  providers: [Singleton, FactoryMethod],
+  providers: [Singleton, FactoryMethod, Builder, Prototype],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
