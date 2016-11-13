@@ -14,7 +14,7 @@ export class InMemoryDataService implements InMemoryDbService {
             {id: 10, name: "MongoDB", url: 'https://www.mongodb.com/community'},
             {id: 11, name: "Express", url: 'http://expressjs.com/'},
             {id: 12, name: "MDN", url: 'https://developer.mozilla.org/en/'},
-            {id: 13, name: "NEW", url: 'https://new.org'}
+            {id: 13, name: "WebSocket", url: 'https://tools.ietf.org/html/rfc6455'}
             ];
             return {technologies};
         }

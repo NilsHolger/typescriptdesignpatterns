@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { TechnologyComponent } from './technology.component';
 import { TechnologyDetailComponent } from './technology-detail/technology-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ContactComponent } from './contact/contact.component';
+import { WikiSearchComponent } from './wikisearch/wikisearch.component';
+import { DesignPatternsComponent } from './designpatterns/designpatterns.component';
 
 const routes: Routes = [
     {
@@ -16,6 +19,18 @@ const routes: Routes = [
     {
        path: 'dashboard',
        component: DashboardComponent
+    },
+    {
+      path: 'contact',
+      component: ContactComponent
+    },
+    {
+      path: 'wikisearch',
+      component: WikiSearchComponent
+    },
+    {
+      path: 'designpatterns',
+      component: DesignPatternsComponent
     },
     {
       path: '',
