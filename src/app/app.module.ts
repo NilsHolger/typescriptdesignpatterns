@@ -5,22 +5,25 @@ import { HttpModule } from '@angular/http';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
-
+import './rxjs-extensions';
 import { Adapter } from './adapter';
 import { Technology } from './technology';
 import { AppComponent } from './appcomponent';
 import { TechnologyComponent } from './technology.component';
 import { TechnologyDetailComponent } from './technology-detail/technology-detail.component';
 import { TechnologyService } from './technology-service';
+import { TechnologySearchService } from './technologysearch-service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TechnologySearchComponent } from './technologysearch/technologysearch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TechnologyComponent,
     TechnologyDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    TechnologySearchComponent
 
   ],
   imports: [
@@ -30,7 +33,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
-  providers: [TechnologyService],
+  providers: [TechnologyService, TechnologySearchService],
   bootstrap: [AppComponent]
 })
 
