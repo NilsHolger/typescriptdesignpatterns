@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -29,6 +30,8 @@ import { WikipediaSearchService } from './wikisearch/wikipedia.service';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { PokemonService } from './pokemons/pokemon.service';
 import { CapitalizePipe } from './pokemons/capitalize.pipe';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroesService } from './heroes/heroes.service'
 
 @NgModule({
   declarations: [
@@ -45,7 +48,8 @@ import { CapitalizePipe } from './pokemons/capitalize.pipe';
     WikiSearchComponent,
     DesignPatternsComponent,
     PokemonsComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +58,9 @@ import { CapitalizePipe } from './pokemons/capitalize.pipe';
     JsonpModule,
     AppRoutingModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
+    MaterialModule.forRoot()
   ],
-  providers: [TechnologyService, TechnologySearchService, UserService, ContactService, WikipediaSearchService, PokemonService],
+  providers: [TechnologyService, HeroesService, TechnologySearchService, UserService, ContactService, WikipediaSearchService, PokemonService],
   bootstrap: [AppComponent]
 })
 

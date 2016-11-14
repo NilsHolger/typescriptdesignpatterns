@@ -1,0 +1,12 @@
+<md-input placeholder="Search for heroes ..." #searchBox (keyup)="search(searchBox.value)"></md-input>
+<md-grid-list cols="4" rowheight="250">
+    <md-grid-tile *ngFor="let hero of heroes | async">
+                <img [src]="getImage(hero.thumbnail)" alt="photo of {{character.name}}">
+                  <md-grid-tile-footer>
+                    <h3 md-line>{{hero.name}}</h3>
+                      <a md-tooltip="Comics">
+                        <md-icon>books</md-icon>
+                      </a>
+                  </md-grid-tile-footer>
+    </md-grid-tile>
+</md-grid-list>

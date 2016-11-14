@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { WikiSearchComponent } from './wikisearch/wikisearch.component';
 import { DesignPatternsComponent } from './designpatterns/designpatterns.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
+import { HeroesComponent } from './heroes/heroes.component';
 const routes: Routes = [
     {
         path: 'technologies',
@@ -31,10 +32,6 @@ const routes: Routes = [
     {
       path: 'designpatterns',
       component: DesignPatternsComponent
-    },
-    {
-      path:'pokemons',
-      component: PokemonsComponent
     },
     {
       path: '',
