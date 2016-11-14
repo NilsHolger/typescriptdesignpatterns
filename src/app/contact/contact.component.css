@@ -1,19 +1,23 @@
 .ng-valid[required] {
   border-left: 5px solid #42A948; /* green */
+  width: 40%;
 }
 .ng-invalid {
   border-left: 5px solid #a94442; /* red */
+  width: 40%;
 }
 .alert {
   padding: 15px;
   margin: 8px 0;
   border: 1px solid transparent;
   border-radius: 4px;
+  width: 40%;
 }
 .alert-danger {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
+  width: 40%;
 }
 .msg {
   color: blue;
@@ -21,4 +25,12 @@
   border: 1px solid transparent;
   border-radius: 4px;
   margin-bottom: 20px;
+  width: 40%;
 }
+input {
+  height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+  width: 40%;
+}
+

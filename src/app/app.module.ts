@@ -26,7 +26,9 @@ import { ContactService } from './contact/contact.service';
 import { WikiSearchComponent } from './wikisearch/wikisearch.component';
 import { DesignPatternsComponent } from './designpatterns/designpatterns.component';
 import { WikipediaSearchService } from './wikisearch/wikipedia.service';
-
+import { PokemonsComponent } from './pokemons/pokemons.component';
+import { PokemonService } from './pokemons/pokemon.service';
+import { CapitalizePipe } from './pokemons/capitalize.pipe';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { WikipediaSearchService } from './wikisearch/wikipedia.service';
     AwesomePipe,
     ContactHighlightDirective,
     WikiSearchComponent,
-    DesignPatternsComponent
+    DesignPatternsComponent,
+    PokemonsComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,7 @@ import { WikipediaSearchService } from './wikisearch/wikipedia.service';
     AppRoutingModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
-  providers: [TechnologyService, TechnologySearchService, UserService, ContactService, WikipediaSearchService],
+  providers: [TechnologyService, TechnologySearchService, UserService, ContactService, WikipediaSearchService, PokemonService],
   bootstrap: [AppComponent]
 })
 
