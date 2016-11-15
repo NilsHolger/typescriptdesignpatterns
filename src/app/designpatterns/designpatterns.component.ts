@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Handler, ConcreteHandler1, ConcreteHandler2, ConcreteHandler3 } from './chainofresponsibility';
+import { Receiver, Command, Invoker, ConcreteCommand1, ConcreteCommand2 } from './command';
 
 @Component({
   selector: 'app-designpatterns',
@@ -8,27 +8,18 @@ import { Handler, ConcreteHandler1, ConcreteHandler2, ConcreteHandler3 } from '.
   styleUrls: ['./designpatterns.component.css']
 })
 export class DesignPatternsComponent implements OnInit {
-  private h1: Handler;
-  private h2: Handler;
-  private h3: Handler;
-  private reqs: Array<number> = [ 2, 7, 23, 34, 4, 5, 8, 3];
-  private i: number;
-  private max: number = this.reqs.length;
-
 
   constructor() {
-    this.h1 = new ConcreteHandler1(3);
-    this.h2 = new ConcreteHandler2(7);
-    this.h3 = new ConcreteHandler3(20);
-    this.invoke();
+    let receiver: Receiver = new Receiver();
+    let command1: Command = new ConcreteCommand1(receiver);
+    let command2: Command = new ConcreteCommand2(receiver);
+    let invoker: Invoker = new Invoker();
+    invoker.storeAndExecute(command1);
+    invoker.storeAndExecute(command2);
    }
 
   invoke() : void {
-    this.h1.setHandler(this.h2);
-    this.h2.setHandler(this.h3);
-    for (this.i = 0; this.i < this.max; this.i += 1 ){
-            this.h1.operation("operation is fired ... ", this.reqs[this.i]);
-    }
+
   }
   ngOnInit() {
   }

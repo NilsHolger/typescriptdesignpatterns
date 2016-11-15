@@ -66,7 +66,8 @@ a way of passing a request between a chain of objects, avoid coupling the sender
 more than one object a chance to handle the request, chain the receiving objects and pass the request along the chain
 until an object handles it
 
-2.
+2. Command
+encapsulate a command request as an object, or create objects which encapsulate actions and parameters
 
 3.
 
