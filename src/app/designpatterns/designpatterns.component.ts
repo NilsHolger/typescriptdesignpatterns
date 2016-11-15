@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import {ConcreteTechnology, Context, WorkingSoftwareTechnology} from './interpreter';
+import { ConcreteIterator, Numbers } from './iterator';
 
 @Component({
   selector: 'app-designpatterns',
@@ -8,20 +8,13 @@ import {ConcreteTechnology, Context, WorkingSoftwareTechnology} from './interpre
   styleUrls: ['./designpatterns.component.css']
 })
 export class DesignPatternsComponent implements OnInit {
+  private fibArray: number[] = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
   constructor() {
-    let context: Context = new Context();
-    let list = [];
-    list.push(new ConcreteTechnology());
-    list.push(new ConcreteTechnology());
-    list.push(new ConcreteTechnology());
-    list.push(new WorkingSoftwareTechnology());
-    list.push(new ConcreteTechnology());
-    list.push(new ConcreteTechnology());
-    list.push(new WorkingSoftwareTechnology());
-    list.push(new WorkingSoftwareTechnology());
-    for (let i = 0; i < list.length; i += 1) {
-      list[i].interpret(context);
-    }
+  let numbers: Numbers = new Numbers(this.fibArray);
+  let it: ConcreteIterator = <ConcreteIterator>numbers.createIterator();
+  while(it.hasNext()){
+    console.log(it.next());
+  }
   }
   invoke(): void {}
   ngOnInit() {}

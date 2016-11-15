@@ -74,7 +74,9 @@ a way to include language elements in a program, map a domain to a language, the
 to a hierarchical object oriented design or given a language define a representation for its grammar along with an
 interpreter that uses the representation to interpret sentences in the language
 
-4.
+4. Iterator
+sequentially access the elements of a collection or provide a way to access the elements of an aggregate object
+sequentially without exposing its underlying representation
 
 5.
 
@@ -82,5 +84,5 @@ interpreter that uses the representation to interpret sentences in the language
 
 7.
 
-8.
+8. ...
 
