@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FlyweightFactory, ConcreteFlyWeight } from './flyweight';
+import { Proxy } from './proxy';
 
 @Component({
   selector: 'app-designpatterns',
@@ -8,20 +8,19 @@ import { FlyweightFactory, ConcreteFlyWeight } from './flyweight';
   styleUrls: ['./designpatterns.component.css']
 })
 export class DesignPatternsComponent implements OnInit {
-  conq100: ConcreteFlyWeight;
-  conq200: ConcreteFlyWeight;
+  private proxy1000: Proxy = new Proxy("1000");
+  private proxy1001: Proxy = new Proxy("1001");
+
   constructor() {
     this.invoke();
    }
 
   invoke() : void {
-    const factory: FlyweightFactory = new FlyweightFactory();
-
-    this.conq100 = <ConcreteFlyWeight>factory.getFlyweight("conq100");
-    this.conq200 = <ConcreteFlyWeight>factory.getFlyweight("conq200");
-
-    this.conq100.operation("100");
-    this.conq200.operation("200");
+    this.proxy1000.doTask();
+    this.proxy1000.doTask();
+    this.proxy1001.doTask();
+    this.proxy1001.doTask();
+    this.proxy1000.doTask();
 
 }
   ngOnInit() {

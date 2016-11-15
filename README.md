@@ -45,7 +45,8 @@ a single class that represents an entire subsystem
 6. Flyweight
 a fine-grained instance used for efficient sharing
 
-7.
+7. Proxy
+an object representing another object, provide a surrogate or placeholder for another object to control access to it
 
 8.
 
