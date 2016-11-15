@@ -10,6 +10,7 @@ recommended javascript engine client side, server side => v8 is on es7
 to explore: investigate test driven development in javascript and unit testing
 
 Creational
+
 1. Singleton
 a class of which only a single instance can exist
 
