@@ -8,6 +8,16 @@ get inspired and build an app, then build another one ...
 the family is together: node, javascript, v8, c++
 recommended javascript engine client side, server side => v8 is on es7
 to explore: investigate test driven development in javascript and unit testing
+namaste friend
+my soul honors your soul
+i honor the place in you where
+the entire universe resides.
+i honor the light, love, truth,
+beauty and peace within you,
+because it is also within me.
+in sharing these things
+we are united, we are the same,
+we are one.
 
 Creational
 
@@ -49,19 +59,24 @@ a fine-grained instance used for efficient sharing
 7. Proxy
 an object representing another object, provide a surrogate or placeholder for another object to control access to it
 
+Behavioral
+
+1. Chain of Responsibility
+a way of passing a request between a chain of objects, avoid coupling the sender of a request to its receiver by giving
+more than one object a chance to handle the request, chain the receiving objects and pass the request along the chain
+until an object handles it
+
+2.
+
+3.
+
+4.
+
+5.
+
+6.
+
+7.
+
 8.
-
-9.
-
-10.
-
-11.
-
-12.
-
-13.
-
-14.
-
-15.
 
