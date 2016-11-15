@@ -7,6 +7,7 @@ this is world class https://www.yearofmoo.com/ a model in humanity and technolog
 get inspired and build an app, then build another one ...
 the family is together: node, javascript, v8, c++
 recommended javascript engine client side, server side => v8 is on es7
+to explore: investigate test driven development in javascript and unit testing
 
 Creational
 1. Singleton
@@ -38,9 +39,10 @@ a tree structure of simple and composite objects
 4. Decorator
 add responsibilities to objects dynamically
 
-5. 
+5. Facade
+a single class that represents an entire subsystem
 
-6.
+6. 
 
 7.
 
