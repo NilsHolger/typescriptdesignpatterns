@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { Receiver, Command, Invoker, ConcreteCommand1, ConcreteCommand2 } from './command';
+import {ConcreteTechnology, Context, WorkingSoftwareTechnology} from './interpreter';
 
 @Component({
   selector: 'app-designpatterns',
@@ -8,20 +8,21 @@ import { Receiver, Command, Invoker, ConcreteCommand1, ConcreteCommand2 } from '
   styleUrls: ['./designpatterns.component.css']
 })
 export class DesignPatternsComponent implements OnInit {
-
   constructor() {
-    let receiver: Receiver = new Receiver();
-    let command1: Command = new ConcreteCommand1(receiver);
-    let command2: Command = new ConcreteCommand2(receiver);
-    let invoker: Invoker = new Invoker();
-    invoker.storeAndExecute(command1);
-    invoker.storeAndExecute(command2);
-   }
-
-  invoke() : void {
-
+    let context: Context = new Context();
+    let list = [];
+    list.push(new ConcreteTechnology());
+    list.push(new ConcreteTechnology());
+    list.push(new ConcreteTechnology());
+    list.push(new WorkingSoftwareTechnology());
+    list.push(new ConcreteTechnology());
+    list.push(new ConcreteTechnology());
+    list.push(new WorkingSoftwareTechnology());
+    list.push(new WorkingSoftwareTechnology());
+    for (let i = 0; i < list.length; i += 1) {
+      list[i].interpret(context);
+    }
   }
-  ngOnInit() {
-  }
-
+  invoke(): void {}
+  ngOnInit() {}
 }

@@ -69,7 +69,10 @@ until an object handles it
 2. Command
 encapsulate a command request as an object, or create objects which encapsulate actions and parameters
 
-3.
+3. Interpreter
+a way to include language elements in a program, map a domain to a language, the language to a grammar, and the grammar
+to a hierarchical object oriented design or given a language define a representation for its grammar along with an
+interpreter that uses the representation to interpret sentences in the language
 
 4.
 
