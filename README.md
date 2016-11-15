@@ -42,7 +42,8 @@ add responsibilities to objects dynamically
 5. Facade
 a single class that represents an entire subsystem
 
-6. 
+6. Flyweight
+a fine-grained instance used for efficient sharing
 
 7.
 
