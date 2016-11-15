@@ -32,7 +32,8 @@ match interfaces of different classes
 7. Bridge
 separates an object's interface from its implementation
 
-8.
+8. Composite
+a tree structure of simple and composite objects
 
 9.
 
