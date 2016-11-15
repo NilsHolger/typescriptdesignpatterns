@@ -26,14 +26,25 @@ a fully initialized instance to be copied or cloned
 
 Structural
 
-6. Adapter
+1. Adapter
 match interfaces of different classes
 
-7. Bridge
+2. Bridge
 separates an object's interface from its implementation
 
-8. Composite
+3. Composite
 a tree structure of simple and composite objects
+
+4. Decorator
+add responsibilities to objects dynamically
+
+5. 
+
+6.
+
+7.
+
+8.
 
 9.
 
@@ -48,14 +59,4 @@ a tree structure of simple and composite objects
 14.
 
 15.
-
-16.
-
-17.
-
-18.
-
-19.
-
-20.
 
