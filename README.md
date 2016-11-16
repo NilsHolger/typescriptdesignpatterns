@@ -101,7 +101,9 @@ them interchangeable, strategy lets the algorithm vary independently from client
 defer the exact steps of an algorithm to a subclass, define the basic steps of an algorithm and allow the 
 implementation of the individual steps to be changed
 
-11.
+11. Visitor
+defines a new operation to a class without change, allows for one or more operations to be applied to a set
+of objects at runtime, decoupling the operations from the object structure
 
 
 the idea of design patterns is an attempt to standardize what are already considered to be best practices.
