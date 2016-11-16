@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import { Context, ConcreteStateA } from './state';
+import { Context, ConcreteStrategy1, ConcreteStrategy2, ConcreteStrategy3 } from './strategy';
 
 @Component({
   selector: 'app-designpatterns',
@@ -10,15 +10,12 @@ import { Context, ConcreteStateA } from './state';
 export class DesignPatternsComponent implements OnInit {
 
   constructor(){
-      const context: Context = new Context(new ConcreteStateA());
-      context.request();
-      context.request();
-      context.request();
-      context.request();
-      context.request();
-      context.request();
-      context.request();
-      context.request();
+      let context: Context = new Context(new ConcreteStrategy1());
+      context.executeStrategy();
+      context = new Context(new ConcreteStrategy2());
+      context.executeStrategy();
+      context = new Context(new ConcreteStrategy3());
+      context.executeStrategy();
   }
   
   invoke(): void {}

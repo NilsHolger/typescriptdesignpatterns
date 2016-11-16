@@ -93,7 +93,9 @@ one object changes state, all its dependents are notified and updated automatica
 alter an object's behavior when its state changes, a cleaner way for an object to change its behavior at runtime
 without resorting to large monolithic conditional statements
 
-9. 
+9. Strategy
+encapsulate an algorithm inside a class, define a family of algorithms, encapsulate each one, and make
+them interchangeable, strategy lets the algorithm vary independently from clients that use it 
 
 10.
 
