@@ -85,7 +85,9 @@ to each other explicitly, and it lets you vary their interaction independently
 6. Memento
 capture and restore an object's internal state 
 
-7.
+7. Observer
+a way of notifying change to a number of classes, define a one to many dependency between objects so that when
+one object changes state, all its dependents are notified and updated automatically 
 
 8. ...
 

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import { State, Originator, CareTaker } from './memento';
+import { ConcreteSubject, ConcreteObserver } from './observer';
 
 @Component({
   selector: 'app-designpatterns',
@@ -10,15 +10,13 @@ import { State, Originator, CareTaker } from './memento';
 export class DesignPatternsComponent implements OnInit {
 
   constructor(){
-    const state: State = new State("... state");
-    const originator: Originator = new Originator(state);
-    const careTaker: CareTaker = new CareTaker();
+      const sub: ConcreteSubject = new ConcreteSubject();
+      sub.register(new ConcreteObserver(sub, "flash"));
+      sub.register(new ConcreteObserver(sub, "wonderwoman"));
+      sub.register(new ConcreteObserver(sub, "spiderman"));
 
-    careTaker.Memento = originator.createMemento();
-    originator.State = new State("something else ...");
-
-    originator.setMemento(careTaker.Memento);
-
+      sub.SubjectState = 100;
+      sub.notify();
   }
   
   invoke(): void {}
