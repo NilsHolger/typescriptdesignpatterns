@@ -82,7 +82,8 @@ sequentially without exposing its underlying representation
 defines simplified communication between classes, or promotes loose coupling by keeping objects from referring
 to each other explicitly, and it lets you vary their interaction independently 
 
-6.
+6. Memento
+capture and restore an object's internal state 
 
 7.
 

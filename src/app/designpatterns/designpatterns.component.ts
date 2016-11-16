@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import { ConcreteMediator, ConcreteColleagueA, ConcreteColleagueB } from './mediator';
+import { State, Originator, CareTaker } from './memento';
 
 @Component({
   selector: 'app-designpatterns',
@@ -10,15 +10,14 @@ import { ConcreteMediator, ConcreteColleagueA, ConcreteColleagueB } from './medi
 export class DesignPatternsComponent implements OnInit {
 
   constructor(){
-    const cm: ConcreteMediator = new ConcreteMediator();
-    const c1: ConcreteColleagueA = new ConcreteColleagueA(cm);
-    const c2: ConcreteColleagueB = new ConcreteColleagueB(cm);
+    const state: State = new State("... state");
+    const originator: Originator = new Originator(state);
+    const careTaker: CareTaker = new CareTaker();
 
-    cm.concreteColleagueA = c1;
-    cm.concreteColleagueB = c2;
+    careTaker.Memento = originator.createMemento();
+    originator.State = new State("something else ...");
 
-    c1.send("send of concretecolleagueA is being invoked");
-    c2.send("send of concretecolleagueB is being invoked");
+    originator.setMemento(careTaker.Memento);
 
   }
   
