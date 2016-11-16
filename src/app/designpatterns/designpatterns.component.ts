@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import { ConcreteSubject, ConcreteObserver } from './observer';
+import { Context, ConcreteStateA } from './state';
 
 @Component({
   selector: 'app-designpatterns',
@@ -10,13 +10,15 @@ import { ConcreteSubject, ConcreteObserver } from './observer';
 export class DesignPatternsComponent implements OnInit {
 
   constructor(){
-      const sub: ConcreteSubject = new ConcreteSubject();
-      sub.register(new ConcreteObserver(sub, "flash"));
-      sub.register(new ConcreteObserver(sub, "wonderwoman"));
-      sub.register(new ConcreteObserver(sub, "spiderman"));
-
-      sub.SubjectState = 100;
-      sub.notify();
+      const context: Context = new Context(new ConcreteStateA());
+      context.request();
+      context.request();
+      context.request();
+      context.request();
+      context.request();
+      context.request();
+      context.request();
+      context.request();
   }
   
   invoke(): void {}

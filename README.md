@@ -89,5 +89,21 @@ capture and restore an object's internal state
 a way of notifying change to a number of classes, define a one to many dependency between objects so that when
 one object changes state, all its dependents are notified and updated automatically 
 
-8. ...
+8. State
+alter an object's behavior when its state changes, a cleaner way for an object to change its behavior at runtime
+without resorting to large monolithic conditional statements
 
+9. 
+
+10.
+
+11.
+
+
+the idea of design patterns is an attempt to standardize what are already considered to be best practices.
+in principle the attempt to formalize the architecture of the production ready code to be produced is a lofty goal.
+it is almost always more efficient solution to use a well factored implementation rather than just a barely good enough
+design pattern, the goal is working software that is easy to read and maintain.
+premature optimization is the root of all evil. intellectual stimulation coding down all these design patterns,
+the exploration continues, search for the unknown ...
+fearless, ruthless and honest in all projects and perpetually focus on the goal progress olympian spirit
