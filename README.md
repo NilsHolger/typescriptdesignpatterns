@@ -78,7 +78,9 @@ interpreter that uses the representation to interpret sentences in the language
 sequentially access the elements of a collection or provide a way to access the elements of an aggregate object
 sequentially without exposing its underlying representation
 
-5.
+5. Mediator
+defines simplified communication between classes, or promotes loose coupling by keeping objects from referring
+to each other explicitly, and it lets you vary their interaction independently 
 
 6.
 

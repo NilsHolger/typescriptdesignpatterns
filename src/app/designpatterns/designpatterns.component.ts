@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import { ConcreteIterator, Numbers } from './iterator';
+import { ConcreteMediator, ConcreteColleagueA, ConcreteColleagueB } from './mediator';
 
 @Component({
   selector: 'app-designpatterns',
@@ -8,14 +8,21 @@ import { ConcreteIterator, Numbers } from './iterator';
   styleUrls: ['./designpatterns.component.css']
 })
 export class DesignPatternsComponent implements OnInit {
-  private fibArray: number[] = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-  constructor() {
-  let numbers: Numbers = new Numbers(this.fibArray);
-  let it: ConcreteIterator = <ConcreteIterator>numbers.createIterator();
-  while(it.hasNext()){
-    console.log(it.next());
+
+  constructor(){
+    const cm: ConcreteMediator = new ConcreteMediator();
+    const c1: ConcreteColleagueA = new ConcreteColleagueA(cm);
+    const c2: ConcreteColleagueB = new ConcreteColleagueB(cm);
+
+    cm.concreteColleagueA = c1;
+    cm.concreteColleagueB = c2;
+
+    c1.send("send of concretecolleagueA is being invoked");
+    c2.send("send of concretecolleagueB is being invoked");
+
   }
-  }
+  
   invoke(): void {}
   ngOnInit() {}
 }
+
