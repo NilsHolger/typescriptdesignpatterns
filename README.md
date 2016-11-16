@@ -97,7 +97,9 @@ without resorting to large monolithic conditional statements
 encapsulate an algorithm inside a class, define a family of algorithms, encapsulate each one, and make
 them interchangeable, strategy lets the algorithm vary independently from clients that use it 
 
-10.
+10. Template method
+defer the exact steps of an algorithm to a subclass, define the basic steps of an algorithm and allow the 
+implementation of the individual steps to be changed
 
 11.
 
