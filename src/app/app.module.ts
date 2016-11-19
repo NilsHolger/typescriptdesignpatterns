@@ -31,7 +31,15 @@ import { PokemonsComponent } from './pokemons/pokemons.component';
 import { PokemonService } from './pokemons/pokemon.service';
 import { CapitalizePipe } from './pokemons/capitalize.pipe';
 import { HeroesComponent } from './heroes/heroes.component';
-import { HeroesService } from './heroes/heroes.service'
+import { HeroesService } from './heroes/heroes.service';
+import { FormsComponent } from './forms/forms.component';
+import { VideosComponent } from './videos/videos.component';
+import { VideoListComponent } from './videos/video-list/video-list.component';
+import { VideoListItemComponent } from './videos/video-list-item/video-list-item.component';
+import { VideoDetailComponent } from './videos/video-detail/video-detail.component';
+import { VideoService } from './videos/video.service';
+import { AppStateService } from './videos/app-state.service';
+import { YoutubeSafeUrlPipe } from './videos/youtube-safe-url.pipe';
 
 @NgModule({
   declarations: [
@@ -49,7 +57,13 @@ import { HeroesService } from './heroes/heroes.service'
     DesignPatternsComponent,
     PokemonsComponent,
     CapitalizePipe,
-    HeroesComponent
+    HeroesComponent,
+    FormsComponent,
+    VideosComponent,
+    VideoListComponent,
+    VideoListItemComponent,
+    VideoDetailComponent,
+    YoutubeSafeUrlPipe
   ],
   imports: [
     BrowserModule,
@@ -60,7 +74,7 @@ import { HeroesService } from './heroes/heroes.service'
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     MaterialModule.forRoot()
   ],
-  providers: [TechnologyService, HeroesService, TechnologySearchService, UserService, ContactService, WikipediaSearchService, PokemonService],
+  providers: [TechnologyService, VideoService, AppStateService, HeroesService, TechnologySearchService, UserService, ContactService, WikipediaSearchService, PokemonService],
   bootstrap: [AppComponent]
 })
 
